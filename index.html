@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>ACTECH LAND - Công ty Bất Động Sản tại Đà Nẵng - Miền Trung</title>
+    <link rel="icon" href="http://bds41.giaodienwebmau.com/wp-content/uploads/2019/08/transparent-logo.png"
+        type="image/x-icon">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,11 +12,133 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
+<style>
+    /* Make the image fully responsive */
+    /* .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } */
+</style>
+
 <body>
-    <h1>Bài tập nhóm</h1>
-    <p>practice saving changes between branches</p>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <!-- logo -->
+            <a class="navbar-brand col-sm-4" href="#" rel="home"><img width="256" height="85"
+                    src="images/transparent-logo.png"></a>
+
+            <!-- Links -->
+            <ul class="navbar-nav col-sm-7">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">VỀ CHÚNG TÔI</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </li>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">DỰ ÁN</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">VĂN HÓA</a>
+                </li>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">TIN TỨC</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TUYỂN DỤNG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LIÊN HỆ</a>
+                </li>
+            </ul>
+
+            <a href="#">
+                <span class="glyphicon glyphicon-search col-sm-2" style="color:white"></span>
+            </a>
+            <!-- ko có ra được icon search??? -->
+
+        </nav>
+    </header>
+
+    <section>
+        <!-- START pictures slide -->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/hoi-an-golden-sea.jpg" width="100%" height="694" object-fit="contain">
+                    <div class="carousel-caption">
+                        <h3
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
+                            Hội An Golden Sea</h3>
+                        <br><a href="URL"
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 15px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">XEM
+                            THÊM+</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/shophouse-vinh-1.jpg" width="100%" height="694" object-fit="contain">
+                    <div class="carousel-caption">
+                        <h3
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
+                            Vincom Shophouse Vinh</h3>
+                        <br><a href="URL"
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 15px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">XEM
+                            THÊM+</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hoa-binh-da-nang-green.jpg" width="100%" height="694" object-fit="contain">
+                    <div class="carousel-caption">
+                        <h3
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
+                            Hòa Bình Green Đà Nẵng</h3>
+                        <br><a href="URL"
+                            style="background-color: rgba(29, 62, 103, 0.8); font-size: 15px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">XEM
+                            THÊM+</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+    <!-- END pictures slide -->
+
+    <footer>This is a sample of a footer</footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
