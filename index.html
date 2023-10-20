@@ -12,6 +12,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -22,60 +24,172 @@
 </head>
 
 <style>
-    /* Make the image fully responsive */
-    /* .carousel-inner img {
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* form */
+    form {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    form input,
+    form select,
+    form button {
+        margin: 5px;
+    }
+
+
+    /* moving logo */
+    .logo-container {
+        display: flex;
+        overflow: hidden;
         width: 100%;
-        height: 100%;
-        object-fit: contain;
-    } */
+    }
+
+    .moving-logo {
+        width: 100px;
+        /* Adjust the logo size */
+        margin-right: 50px;
+        animation: moveLeft 5s linear infinite;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* footer */
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* top button */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: orangered;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+    }
 </style>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #446084;">
             <!-- logo -->
-            <a class="navbar-brand col-sm-4" href="#" rel="home"><img width="256" height="85"
+            <a class="navbar-brand col-sm-4" href="#" rel="home"><img width="200" height="80"
                     src="images/transparent-logo.png"></a>
 
             <!-- Links -->
             <ul class="navbar-nav col-sm-7">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">VỀ CHÚNG TÔI</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;">VỀ
+                        CHÚNG TÔI</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="#">Giới thiệu chung</a>
+                        <a class="dropdown-item" href="#">Tầm nhìn - Sứ mệnh</a>
+                        <a class="dropdown-item" href="#">Giá trị cốt lõi</a>
+                        <a class="dropdown-item" href="#">Ban lãnh đạo</a>
+                        <a class="dropdown-item" href="#">Hệ thống chi nhánh</a>
                     </div>
                 </li>
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">DỰ ÁN</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Link 1</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
-                </div>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;">DỰ
+                        ÁN</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Căn hộ</a>
+                        <a class="dropdown-item" href="#">Nhà phố</a>
+                        <a class="dropdown-item" href="#">Đất nền</a>
+                    </div>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">VĂN HÓA</a>
                 </li>
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">TIN TỨC</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Link 1</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
-                </div>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;">TIN
+                        TỨC</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tin thị trường</a>
+                        <a class="dropdown-item" href="#">Tin về Actech</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: bold;">TUYỂN DỤNG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TUYỂN DỤNG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">LIÊN HỆ</a>
+                    <a class="nav-link" href="#" style="font-weight: bold;">LIÊN HỆ</a>
                 </li>
             </ul>
 
-            <a href="#">
-                <span class="glyphicon glyphicon-search col-sm-2" style="color:white"></span>
-            </a>
-            <!-- ko có ra được icon search??? -->
+
+            <div style="position: relative; display: inline-block;">
+                <a href="#">
+                    <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
+                        onclick="openSearchModal()"></span>
+                </a>
+
+                <div id="searchModal"
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+                        <span style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 24px;"
+                            onclick="closeSearchModal()">&times;</span>
+                        <input type="text" placeholder="Tìm kiếm..." style="width: 80%; padding: 10px; margin: 10px 0;">
+                        <a href="#">
+                            <span class="fas fa-search"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openSearchModal() {
+                    document.getElementById("searchModal").style.display = "block";
+                }
+
+                function closeSearchModal() {
+                    document.getElementById("searchModal").style.display = "none";
+                }
+            </script>
 
         </nav>
     </header>
@@ -137,19 +251,197 @@
     </section>
     <!-- END pictures slide -->
 
-    <footer>This is a sample of a footer</footer>
+    <!-- Start section 2 -->
+    <section>
+        <div style="margin: 30px;">
+            <div class="colleft" style="width: 50%; float: left;">
+                <h4 style="color: #153660;">CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN</h4>
+                <h1 style="color: #153660;"><a href="#">ACTECH MIỀN TRUNG</a></h1>
+                <p style="font-size: 95%;">Actech Miền Trung định hướng xây dựng hệ thống phân phối bất động sản rộng
+                    khắp,trở thành doanh nghiệp kinh doanh và phát triển dự án bất động sản tin cậy, là lựa chọn hàng
+                    đầu cho những nhà đầu tư, cho khách hàng tại Việt Nam và cả trong khu vực.</p>
+                <p style="font-size: 95%;">Sứ mệnh của chúng tôi là mang lại giá trị tài chính cho nhà đầu tư, mang đến
+                    cuộc sống tươi đẹp cho cộng đồng và động lực làm việc cho nhân viên thông qua việc phát triểndoanh
+                    nghiệp theo hướng đa ngành nghề.</p>
+                <a href="#" target="_self" class="button primary is-outline"
+                    style="border-radius:99px; color: orangered;">
+                    <span>Tìm hiểu thêm</span>
+                </a>
+                </a>
+            </div>
+            <img src="images/investing-in-real-estate.gif" alt="GIF Image" style="width: 50%; float: left;">
+        </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        <div style="float: left; width: 25%; text-align: center; padding: 20px;">
+            <div style="font-size: 36px;">Icon 1</div>
+            <h3>86</h3>
+            <p>DỰ ÁN</p>
+        </div>
+
+        <div style="float: left; width: 25%; text-align: center; padding: 20px;">
+            <div style="font-size: 36px;">Icon 2</div>
+            <h3>3</h3>
+            <p>HỆ THỐNG CHI NHÁNH</p>
+        </div>
+
+        <div style="float: left; width: 25%; text-align: center; padding: 20px;">
+            <div style="font-size: 36px;">Icon 3</div>
+            <h3>51</h3>
+            <p>ĐỐI TÁC</p>
+        </div>
+
+        <div style="float: left; width: 25%; text-align: center; padding: 20px;">
+            <div style="font-size: 36px;">Icon 4</div>
+            <h3>150</h3>
+            <p>HỆ THỐNG NHÂN VIÊN</p>
+        </div>
+    </section>
+    <!-- End section 2 -->
+
+    <!-- Start Section 3 - form -->
+    <section style="margin: 50px;" align="center">
+        <h4>ĐĂNG KÍ CỘNG TÁC BÁN HÀNG CÙNG ACTECH MIỀN TRUNG</h2>
+            <hr style="width: 20%">
+            <p>Đến với Actech để nhận chính sách khủng. Được “ứng trước” 20-25% hoa hồng sau khi khách hàng ký HD. Mức
+                hoa
+                hồng hưởng từ 50% – 60%. Được tư vấn & hỗ trợ kiến thức maketing trong suốt quá trình làm việc</p>
+
+            <form>
+                <input type="text" id="name" placeholder="Họ tên *" required>
+                <input type="email" id="email" placeholder="Nhập email (nếu có)">
+                <input type="tel" id="phone" placeholder="Nhập số điện thoại *" required>
+                <select id="job">
+                    <option value="option1">Cộng tác viên</option>
+                    <option value="option2">Khách hàng</option>
+                </select>
+                <input type="submit" value="ĐĂNG KÍ"
+                    style="background-color: orangered; color: white; font-weight: bold;">
+            </form>
+    </section>
+    <!-- END Section 3 - form -->
+
+    <!-- section 4 -->
+    <section style="margin: 50px;" align="center">
+        <h4>DỰ ÁN BẤT ĐỘNG SẢN</h4>
+        <hr style="width: 20%">
+
+        <a href="#" target="_self" class="button primary is-outline" style="border-radius:99px; color: orangered;">
+            <span>Tìm hiểu thêm</span>
+        </a>
+    </section>
+
+    <!-- section 5 news -->
+    <section style="margin: 50px;" align="center">
+        <h4>TIN TỨC</h4>
+        <hr style="width: 20%">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin: 5px; text-align: center;">
+                <img src="images/news1.jpg" alt="News 1" style="width: 100%; height: 200px;">
+                <p>Bất động sản và câu chuyện xây dựng văn hóa doanh nghiệp thời 4.0</p>
+                <a href="">(ĐTCK) “Bão” cách mạng công nghiệp 4.0 đang tạo ra những mô thức kinh doanh mới...</a>
+            </div>
+            <div style="flex: 1; margin: 5px; text-align: center;">
+                <img src="images/news2.jpg" alt="News 2" style="width: 100%; height: 200px;">
+                <p>Chuyên Viên Kd Bất Động Sản Từ 50Triệu Đào Tạo Chuyên Nghiệp Từ Gốc / Có Lương Cứng</p>
+                <a href="">Với quá trình được đào tạo miễn phí, cầm tay chỉ việc bởi chính những...</a>
+            </div>
+            <div style="flex: 1; margin: 5px; text-align: center;">
+                <img src="images/news3.jpg" alt="News 3" style="width: 100%; height: 200px;">
+                <p>Tại sao FPT City lại hấp dẫn nhà đầu tư đến vậy?</p>
+                <a href="">Đà Nẵng đang là thị trường ưa chuộng của những nhà đầu tư địa ốc...</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 6 partners -->
+    <section style="margin: 50px;" align="center">
+        <h4>TIN TỨC</h4>
+        <hr style="width: 20%">
+        <div class="logo-container">
+            <img src="images/logo1.png" alt="Logo 1" class="moving-logo">
+            <img src="images/logo2.png" alt="Logo 2" class="moving-logo">
+            <img src="images/logo3.png" alt="Logo 3" class="moving-logo">
+            <img src="images/logo4.png" alt="Logo 4" class="moving-logo">
+            <img src="images/logo5.png" alt="Logo 4" class="moving-logo">
+            <img src="images/logo6.png" alt="Logo 4" class="moving-logo">
+            <img src="images/logo7.png" alt="Logo 4" class="moving-logo">
+        </div>
+    </section>
+
+    <!-- section 7 address -->
+    <section>
+        <div class="container-fluid" style="background-color: #153660; padding: 10pt;">
+            <div class="row">
+                <div class="col-2">
+                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="80"
+                            src="images/transparent-logo.png"></a>
+                </div>
+
+                <div class="col-6" style="color: white;">
+                    <h6>CÔNG TY BẤT ĐỘNG SẢN ACTECH</h6>
+                    <p>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh , Hải Châu , Đà Nẵng</p>
+                    <p>Điện thoại: 0905 692 314</p>
+                    <p>Email: sagovn.net@gmail.com</p>
+                </div>
+
+                <div class="col-4" style="color: white;">
+                    <h6>ĐĂNG KÍ BẢN TIN</h6>
+                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt;">
+                    <input type="submit" value="ĐĂNG KÍ"
+                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt;">
+                    <p>Kết nối với chúng tôi</p>
+                    <a href="https://www.facebook.com/ActechLand-361919521333812/" target="_blank"
+                        title="Follow on Facebook">
+                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large;"></i>
+                    </a>
+
+                    <a href="#" target="_blank" title="Call us">
+                        <i class="fas fa-phone" aria-hidden="true" style="font-size: x-large; color: greenyellow;"></i>
+                    </a>
+
+                    <a href="#" target="_blank" title="Follow on Youtube">
+                        <i class="fab fa-youtube" aria-hidden="true" style="font-size: x-large; color: red;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgb(15, 157, 244); color: white;" align="center">
+                <div class="col-4" style="border-right: 1px solid white;">HqvDoho</div>
+                <div class="col-4" style="border-right: 1px solid white;">Hotline: 0916065077</div>
+                <div class="col-4">Thiết kế web chuyên nghiệp hàng đầu Việt Nam</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GO to TOP button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 
 </html>
