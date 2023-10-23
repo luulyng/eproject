@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nhà phố - CÔNG TY BẤT ĐỘNG SẢN ACTECH</title>
+    <link rel="icon" href="http://bds41.giaodienwebmau.com/wp-content/uploads/2019/08/transparent-logo.png"
+        type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    .breadcrumb {
+        float: left;
+        margin: 50px 100px 30px 100px;
+        background: none;
+    }
+
+    .filter-dropdown {
+        float: right;
+        margin: 50px 100px 30px 100px;
+    }
+
+    .breadcrumb li {
+        display: inline;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+        content: ' / ';
+        margin: 0 5px;
+    }
+
+    .breadcrumb li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .breadcrumb li a:hover {
+        font-weight: bold;
+    }
+
+    .breadcrumb li.active a {
+        font-weight: bold;
+    }
+
+    .image-results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        margin-left: 100px ;
+    }
+
+    .image-results figure {
+        margin: 10px;
+    }
+
+    .image-results img {
+        width: 300;
+        height: 300;
+    }
+    .clear-float {
+        clear: both;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#153660;">
+            <!-- Navbar content -->
+            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="200" height="80"
+                    src="images/transparent-logo.png"></a>
+            <ul class="navbar-nav col-sm-7">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                        style="font-weight: bold; font-size: medium;">VỀ
+                        CHÚNG TÔI</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
+                        <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
+                        <a class="dropdown-item" href="corevalue.html">Giá trị cốt lõi</a>
+                        <a class="dropdown-item" href="leaders.html">Ban lãnh đạo</a>
+                        <a class="dropdown-item" href="branches.html">Hệ thống chi nhánh</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="projects.html"
+                        style="font-weight: bold; font-size: medium;">DỰ
+                        ÁN</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="apartment.html">Căn hộ</a>
+                        <a class="dropdown-item" href="house.html">Nhà phố</a>
+                        <a class="dropdown-item" href="land.html">Đất nền</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="culture.html" style="font-size: medium;">VĂN HÓA</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                        style="font-weight: bold; font-size: medium;">TIN
+                        TỨC</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tin thị trường</a>
+                        <a class="dropdown-item" href="#">Tin về Actech</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
+                </li>
+            </ul>
+
+
+            <div style="position: relative; display: inline-block;">
+                <a href="#">
+                    <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
+                        onclick="openSearchModal()"></span>
+                </a>
+
+                <div id="searchModal"
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+                        <span style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 24px;"
+                            onclick="closeSearchModal()">&times;</span>
+                        <input type="text" placeholder="Tìm kiếm..." style="width: 80%; padding: 10px; margin: 10px 0;">
+                        <a href="#">
+                            <span class="fas fa-search"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openSearchModal() {
+                    document.getElementById("searchModal").style.display = "block";
+                }
+
+                function closeSearchModal() {
+                    document.getElementById("searchModal").style.display = "none";
+                }
+            </script>
+        </nav>
+    </header>
+
+    <section>
+        <!-- breadcrumb -->
+        <ul class="breadcrumb">
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="#">DỰ ÁN</a></li>
+            <li class="active"><a href="house.html">NHÀ PHỐ</a></li>
+        </ul>
+
+  
+
+        <div class="filter-dropdown">
+            <label for="filter">Showing all 1 results:</label>
+            <select id="filter">
+                <option value="type1">Thứ tự mặc định</option>
+                <option value="type2">Thứ tự theo mức độ phổ biến</option>
+                <option value="type3">Thứ tự theo điểm đánh giá</option>
+                <option value="type4">Mới nhất</option>
+                <option value="type5">Thứ tự theo giá: thấp đến cao</option>
+                <option value="type6">Thứ tự theo giá: cao xuống thấp</option>
+            </select>
+        </div>
+    </section>
+
+    <div class="clear-float"></div>
+
+    <section class="filtered-results">
+        <div class="image-results">
+            <figure price="10" dateCreated="2023/10/1" rating="1" popularity="1">
+                <img src="images/fpt-city-đà-nẵng-300x300.jpg">
+                <figcaption align="center"><a href="#">FPT CITY ĐÀ NẴNG</a></figcaption>
+            </figure>
+
+            <!-- <figure price="60" dateCreated="2023/10/6" rating="6" popularity="6">
+                <img src="images/hòa-bình-green-300x300.jpg">
+                <figcaption align="center"><a href="#">Hòa Bình Green Đà Nẵng</a></figcaption>
+            </figure>
+
+            <figure price="50" dateCreated="2023/10/5" rating="5" popularity="5">
+                <img src="images/toàn-cảnh-golden-sea-hội-an-1-300x300.jpg">
+                <figcaption align="center"><a href="#">HỘI AN GOLDEN SEA</a></figcaption>
+            </figure>
+
+            <figure price="40" dateCreated="2023/10/4" rating="4" popularity="4">
+                <img src="images/homeland-300x300.jpg">
+                <figcaption align="center"><a href="#">HOMELAND PARADISE VILLAGE</a></figcaption>
+            </figure> 
+
+            <figure price="30" dateCreated="2023/10/3" rating="3" popularity="3">
+                <img src="images/nhơn-hội-new-city-300x300.jpg">
+                <figcaption align="center"><a href="#">NHƠN HỘI NEW CITY – PHÂN KHU 2</a></figcaption>
+            </figure> 
+
+            <figure price="20" dateCreated="2023/10/2" rating="2" popularity="2">
+                <img src="images/shophouse-vinh-1-300x300.jpg">
+                <figcaption align="center"><a href="#">Vincom Shophouse Vinh</a></figcaption>
+            </figure> -->
+            
+        </div>
+
+        <script>
+            document.getElementById("filter").addEventListener("change", function () {
+                var filter = this.value;
+                var results = document.querySelectorAll(".filtered-results figure");
+
+                if (filter === "type1") {
+                    // Show all
+                    results.forEach(function (result) {
+                        result.style.display = "visible";
+                    });
+                } else if (filter === "type2") {
+                    // sort by popularity
+                    results = Array.from(results).sort(function (a, b) {
+                        var popularityA = parseInt(a.getAttribute("popularity"));
+                        var popularityB = parseInt(b.getAttribute("popularity"));
+                        return popularityB - popularityA;
+                    });
+                    results.forEach(function (result) {
+                        document.querySelector(".image-results").appendChild(result);
+                    });
+
+                } else if (filter === 'type3') {
+                    // sort by rating
+                    results = Array.from(results).sort(function (a, b) {
+                        var ratingA = parseInt(a.getAttribute("rating"));
+                        var ratingB = parseInt(b.getAttribute("rating"));
+                        return ratingB - ratingA;
+                    });
+                    results.forEach(function (result) {
+                        document.querySelector(".image-results").appendChild(result);
+                    });
+                } else if (filter === "type4") {
+                    // sort by date created (newest first)
+                    results = Array.from(results).sort(function (a, b) {
+                        var dateCreatedA = Date.parse(a.getAttribute('dateCreated'));
+                        var dateCreatedB = Date.parse(b.getAttribute('dateCreated'));
+                        return dateCreatedB - dateCreatedA;
+                    });
+                    results.forEach(function (result) {
+                        document.querySelector(".image-results").appendChild(result);
+                    });
+                } else if (filter === "type5") {
+                    // Sort by price from low to high
+                    results = Array.from(results).sort(function (a, b) {
+                        var priceA = parseInt(a.getAttribute("price"));
+                        var priceB = parseInt(b.getAttribute("price"));
+                        return priceA - priceB;
+                    });
+
+                    results.forEach(function (result) {
+                        document.querySelector(".image-results").appendChild(result);
+                    });
+                } else if (filter === "type6") {
+                    // Sort by price from high to low
+                    results = Array.from(results).sort(function (a, b) {
+                        var priceA = parseInt(a.getAttribute("price"));
+                        var priceB = parseInt(b.getAttribute("price"));
+                        return priceB - priceA;
+                    });
+
+                    results.forEach(function (result) {
+                        document.querySelector(".image-results").appendChild(result);
+                    });
+                }
+            });
+        </script>
+
+    </section>
+
+    
+
+
+    <!-- address bar -->
+    <section>
+        <div class="container-fluid" style="background-color: #153660; padding: 10pt;">
+            <div class="row">
+                <div class="col-2">
+                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="80"
+                            src="images/transparent-logo.png"></a>
+                </div>
+
+                <div class="col-6" style="color: white; margin-bottom: 30pt;">
+                    <h5>CÔNG TY BẤT ĐỘNG SẢN ACTECH</h5>
+                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh ,
+                        Hải Châu , Đà Nẵng</p>
+                    <p><i class="fas fa-phone"></i>Điện thoại: 0905 692 314</p>
+                    <p><i class="far fa-envelope"></i>Email: sagovn.net@gmail.com</p>
+                </div>
+
+                <div class="col-4" style="color: white;">
+                    <h6>ĐĂNG KÍ BẢN TIN</h6>
+                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt;">
+                    <input type="submit" value="ĐĂNG KÍ"
+                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt;">
+                    <p>Kết nối với chúng tôi</p>
+                    <a href="https://www.facebook.com/ActechLand-361919521333812/" target="_blank"
+                        title="Follow on Facebook">
+                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large;"></i>
+                    </a>
+
+                    <a href="#" target="_blank" title="Call us">
+                        <i class="fas fa-phone" aria-hidden="true" style="font-size: x-large; color: greenyellow;"></i>
+                    </a>
+
+                    <a href="#" target="_blank" title="Follow on Youtube">
+                        <i class="fab fa-youtube" aria-hidden="true" style="font-size: x-large; color: red;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgb(15, 157, 244); color: white; font-size:medium;"
+                align="center">
+                <div class="col-4" style="border-right: 1px solid white;">HqvDoho</div>
+                <div class="col-4" style="border-right: 1px solid white;">Hotline: 0916065077</div>
+                <div class="col-4">Thiết kế web chuyên nghiệp hàng đầu Việt Nam</div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
