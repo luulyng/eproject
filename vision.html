@@ -24,88 +24,111 @@
 </head>
 
 <style>
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
     .banner {
         max-width: 100%;
         height: auto;
         display: inline-block;
         vertical-align: middle;
     }
+
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #bg {
+        background-image: url(images/BG.jpg);
+    }
 </style>
 
-<body>
+<body id="bg">
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#153660;">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#153660;">
             <!-- logo -->
-            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="200" height="80"
-                src="images/transparent-logo.png"></a>
+            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="150" height="80"
+                    src="images/transparent-logo.png"></a>
 
-        <!-- Links -->
-        <ul class="navbar-nav col-sm-7">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" style="font-weight: bold; font-size: medium;">VỀ
-                    CHÚNG TÔI</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
-                    <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
-                    <a class="dropdown-item" href="corevalue.html">Giá trị cốt lõi</a>
-                    <a class="dropdown-item" href="leaders.html">Ban lãnh đạo</a>
-                    <a class="dropdown-item" href="branches.html">Hệ thống chi nhánh</a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="projects.html" style="font-weight: bold; font-size: medium;">DỰ
-                    ÁN</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="apartment.html">Căn hộ</a>
-                    <a class="dropdown-item" href="house.html">Nhà phố</a>
-                    <a class="dropdown-item" href="land.html">Đất nền</a>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="culture.html" style="font-size: medium; font-weight: bold;">VĂN HÓA</a>
-            </li>
+            <!-- Links -->
+            <ul class="navbar-nav col-sm-7">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="about.html"
+                        style="font-weight: bold; font-size: medium;">VỀ CHÚNG TÔI</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
+                        <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
+                        <a class="dropdown-item" href="corevalue.html">Giá trị cốt lõi</a>
+                        <a class="dropdown-item" href="leaders.html">Ban lãnh đạo</a>
+                        <a class="dropdown-item" href="branches.html">Hệ thống chi nhánh</a>
+                    </div>
+                </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                        style="font-weight: bold; font-size: medium;">TIN
-                        TỨC</a>
+                    <a class="nav-link dropdown-toggle" href="projects.html"
+                        style="font-weight: bold; font-size: medium;">DỰ ÁN</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Tin thị trường</a>
-                        <a class="dropdown-item" href="#">Tin về Actech</a>
+                        <a class="dropdown-item" href="apartment.html">Căn hộ</a>
+                        <a class="dropdown-item" href="house.html">Nhà phố</a>
+                        <a class="dropdown-item" href="land.html">Đất nền</a>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
+                    <a class="nav-link" href="culture.html" style="font-size: medium; font-weight: bold;">VĂN HÓA</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="news.html"
+                        style="font-weight: bold; font-size: medium;">TIN
+                        TỨC</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="news-industry.html">Tin thị trường</a>
+                        <a class="dropdown-item" href="news-actech.html">Tin về Actech</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="hiring.html" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
+                    <a class="nav-link" href="contact.html" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
                 </li>
             </ul>
 
 
             <div style="position: relative; display: inline-block;">
-                <a href="#">
+                <div>
                     <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
                         onclick="openSearchModal()"></span>
-                </a>
+                </div>
 
                 <div id="searchModal"
-                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"
+                    onclick="closeSearchModal()">
                     <div
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
-                        <span style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 24px;"
-                            onclick="closeSearchModal()">&times;</span>
-                        <input type="text" placeholder="Tìm kiếm..." style="width: 80%; padding: 10px; margin: 10px 0;">
-                        <a href="#">
-                            <span class="fas fa-search"></span>
-                        </a>
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+                        <input type="text" placeholder="Tìm kiếm..."
+                            style="flex: 1; padding: 10px; border: none; outline: none;">
+                        <button
+                            style="background-color: orangered; color: #fff; padding: 10px; cursor: pointer; border: none;">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+
 
             <script>
                 function openSearchModal() {
@@ -124,10 +147,13 @@
         <div align="left" style="margin: 50px;">
             <h3>Tầm nhìn – Sứ mệnh</h3>
             <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown
+                    printer took
                     a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.</b></p>
             <p><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                 the
@@ -145,15 +171,17 @@
         </div>
     </section>
 
+
+    <!-- section 7 address -->
     <section>
         <div class="container-fluid" style="background-color: #153660; padding: 10pt;">
             <div class="row">
-                <div class="col-2">
-                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="80"
+                <div class="col-2" style="padding: 10px">
+                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="150"
                             src="images/transparent-logo.png"></a>
                 </div>
 
-                <div class="col-6" style="color: white; margin-bottom: 30pt;">
+                <div class="col-6" style="color: white; font-size: medium; padding: 20px;">
                     <h5>CÔNG TY BẤT ĐỘNG SẢN ACTECH</h5>
                     <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh ,
                         Hải Châu , Đà Nẵng</p>
@@ -161,27 +189,30 @@
                     <p><i class="far fa-envelope"></i>Email: sagovn.net@gmail.com</p>
                 </div>
 
-                <div class="col-4" style="color: white;">
-                    <h6>ĐĂNG KÍ BẢN TIN</h6>
-                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt;">
+                <div class="col-4" style="color: white; padding: 20px">
+                    <h5>ĐĂNG KÍ BẢN TIN</h5>
+                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt; width: 200px">
                     <input type="submit" value="ĐĂNG KÍ"
-                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt;">
-                    <p>Kết nối với chúng tôi</p>
+                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt; width: 150px">
+
+                    <hr>
+                    <h6>Kết nối với chúng tôi</h6>
                     <a href="https://www.facebook.com/ActechLand-361919521333812/" target="_blank"
                         title="Follow on Facebook">
-                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large;"></i>
+                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Call us">
-                        <i class="fas fa-phone" aria-hidden="true" style="font-size: x-large; color: greenyellow;"></i>
+                        <i class="fas fa-phone" aria-hidden="true"
+                            style="font-size: x-large; color: greenyellow; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Follow on Youtube">
-                        <i class="fab fa-youtube" aria-hidden="true" style="font-size: x-large; color: red;"></i>
+                        <i class="fab fa-youtube" aria-hidden="true"
+                            style="font-size: x-large; color: red; padding: 2pt"></i>
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- footer -->

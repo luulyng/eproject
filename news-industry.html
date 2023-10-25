@@ -2,12 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Nhà phố - CÔNG TY BẤT ĐỘNG SẢN ACTECH</title>
-    <link rel="icon" href="http://bds41.giaodienwebmau.com/wp-content/uploads/2019/08/transparent-logo.png"
-        type="image/x-icon">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin thị trường - CÔNG TY BẤT ĐỘNG SẢN ACTECH</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <style>
@@ -32,60 +30,6 @@
         display: block;
     }
 
-    .breadcrumb {
-        float: left;
-        margin: 50px 100px 30px 100px;
-        background: none;
-    }
-
-    .filter-dropdown {
-        float: right;
-        margin: 50px 100px 30px 100px;
-    }
-
-    .breadcrumb li {
-        display: inline;
-    }
-
-    .breadcrumb li:not(:last-child)::after {
-        content: ' / ';
-        margin: 0 5px;
-    }
-
-    .breadcrumb li a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .breadcrumb li a:hover {
-        font-weight: bold;
-    }
-
-    .breadcrumb li.active a {
-        font-weight: bold;
-    }
-
-    .image-results {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-left: 100px;
-    }
-
-    .image-results figure {
-        margin: 10px;
-    }
-
-    .image-results img {
-        width: 300;
-        height: 300;
-    }
-
-    .clear-float {
-        clear: both;
-    }
-
-    /* footer */
     #footer {
         position: fixed;
         bottom: 0;
@@ -100,7 +44,7 @@
 <body id="bg">
 
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#153660;">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#153660;">
             <!-- logo -->
             <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="150" height="80"
                     src="images/transparent-logo.png"></a>
@@ -187,135 +131,46 @@
         </nav>
     </header>
 
-    <section>
-        <!-- breadcrumb -->
-        <ul class="breadcrumb">
-            <li><a href="index.html">TRANG CHỦ</a></li>
-            <li><a href="#">DỰ ÁN</a></li>
-            <li class="active"><a href="house.html">NHÀ PHỐ</a></li>
-        </ul>
+    <div>
+        <img class="banner" src="images/Banner-tin-tuc.jpg"
+            style="width: 100%; height: auto; display: inline-block; vertical-align: middle;">
+    </div>
 
-
-
-        <div class="filter-dropdown">
-            <label for="filter">Showing all 2 results:</label>
-            <select id="filter">
-                <option value="type1">Thứ tự mặc định</option>
-                <option value="type2">Thứ tự theo mức độ phổ biến</option>
-                <option value="type3">Thứ tự theo điểm đánh giá</option>
-                <option value="type4">Mới nhất</option>
-                <option value="type5">Thứ tự theo giá: thấp đến cao</option>
-                <option value="type6">Thứ tự theo giá: cao xuống thấp</option>
-            </select>
+    <div style="text-align: center; position: relative; overflow: hidden;">
+        <h2 style="margin: 5px; text-transform: uppercase; font-size: 150%; color: #253d52; line-height: 2;">
+            TIN THỊ TRƯỜNG</h2>
+    </div>
+    <div class="line" style="text-align: center; margin-bottom: 30px;">
+        <div class="line1" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+        <div class="line2"
+            style="display: inline-block; height: 12px; margin: 0 5px; position: relative; top: 5px; width: 12px; border: 1px solid orangered; border-radius: 50px;">
         </div>
-    </section>
+        <div class="line3" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+    </div>
 
-    <div class="clear-float"></div>
-
-    <section class="filtered-results">
-        <div class="image-results">
-            <figure price="10" dateCreated="2023/10/1" rating="1" popularity="1">
-                <img src="images/fpt-city-đà-nẵng-300x300.jpg">
-                <figcaption align="center"><a href="#">FPT CITY ĐÀ NẴNG</a></figcaption>
-            </figure>
-
-            <!-- <figure price="60" dateCreated="2023/10/6" rating="6" popularity="6">
-                <img src="images/hòa-bình-green-300x300.jpg">
-                <figcaption align="center"><a href="#">Hòa Bình Green Đà Nẵng</a></figcaption>
-            </figure>
-
-            <figure price="50" dateCreated="2023/10/5" rating="5" popularity="5">
-                <img src="images/toàn-cảnh-golden-sea-hội-an-1-300x300.jpg">
-                <figcaption align="center"><a href="#">HỘI AN GOLDEN SEA</a></figcaption>
-            </figure>
-
-            <figure price="40" dateCreated="2023/10/4" rating="4" popularity="4">
-                <img src="images/homeland-300x300.jpg">
-                <figcaption align="center"><a href="#">HOMELAND PARADISE VILLAGE</a></figcaption>
-            </figure> -->
-
-            <figure price="30" dateCreated="2023/10/3" rating="3" popularity="3">
-                <img src="images/nhơn-hội-new-city-300x300.jpg">
-                <figcaption align="center"><a href="#">NHƠN HỘI NEW CITY – PHÂN KHU 2</a></figcaption>
-            </figure>
-
-            <!-- <figure price="20" dateCreated="2023/10/2" rating="2" popularity="2">
-                <img src="images/shophouse-vinh-1-300x300.jpg">
-                <figcaption align="center"><a href="#">Vincom Shophouse Vinh</a></figcaption>
-            </figure> -->
-
+    <div style="display: flex; flex-wrap: wrap; justify-content:flex-start; margin: 10px">
+        <div style="flex: 1; max-width: 400px; margin: 5px; background-color: #fff;">
+            <img src="images/fpt news.jpg" style="width: 400px; height: 200px;">
+            <p>Tại sao FPT City lại hấp dẫn nhà đầu tư đến vậy?</p>
+            <a href="">Đà Nẵng đang là thị trường ưa chuộng của những nhà đầu tư địa ốc...</a>
+        </div>
+        <div style="flex: 1; max-width: 400px; margin: 5px; background-color: #fff;">
+            <img src="images/homeland news.jpg" style="width: 400px; height: 200px;">
+            <p>Khám phá sức hấp dẫn từ khu đô thị Homeland Paradise Village</p>
+            <a href="">Đà Nẵng – Quảng Nam là 2 tỉnh miền Trung có tiềm năng du l...</a>
+        </div>
+        <div style="flex: 1; max-width: 400px; margin: 5px; background-color: #fff;">
+            <img src="images/vingroup news.jpg"  style="width: 400px; height: 200px;">
+            <p>Vingroup sẽ xây dựng Vincom Shophouse trong năm 2019</p>
+            <a href="">Khu chung cư Quang Trung nói chung và khu B nói riêng là công trình...</a>
+        </div>
+        <div style="flex: 1; max-width: 400px; margin: 5px; background-color: #fff;">
+            <img src="images/nhơn-hội news.jpg" style="width: 400px; height: 200px;">
+            <p>Sức hút mạnh mẽ đến từ dự án Nhơn Hội New City</p>
+            <a href="">Cùng với làn sóng đầu tư bất động sản ven biển dâng cao khắp nơi,...</a>
         </div>
 
-        <script>
-            // JavaScript for handling the filter
-            document.getElementById("filter").addEventListener("change", function () {
-                var filter = this.value;
-                var results = document.querySelectorAll(".filtered-results figure");
-
-                if (filter === "type1") {
-                    // Show all
-                    results.forEach(function (result) {
-                        result.style.display = "visible";
-                    });
-                } else if (filter === "type2") {
-                    // sort by popularity
-                    results = Array.from(results).sort(function (a, b) {
-                        var popularityA = parseInt(a.getAttribute("popularity"));
-                        var popularityB = parseInt(b.getAttribute("popularity"));
-                        return popularityB - popularityA;
-                    });
-                    results.forEach(function (result) {
-                        document.querySelector(".image-results").appendChild(result);
-                    });
-
-                } else if (filter === 'type3') {
-                    // sort by rating
-                    results = Array.from(results).sort(function (a, b) {
-                        var ratingA = parseInt(a.getAttribute("rating"));
-                        var ratingB = parseInt(b.getAttribute("rating"));
-                        return ratingB - ratingA;
-                    });
-                    results.forEach(function (result) {
-                        document.querySelector(".image-results").appendChild(result);
-                    });
-                } else if (filter === "type4") {
-                    // sort by date created (newest first)
-                    results = Array.from(results).sort(function (a, b) {
-                        var dateCreatedA = Date.parse(a.getAttribute('dateCreated'));
-                        var dateCreatedB = Date.parse(b.getAttribute('dateCreated'));
-                        return dateCreatedB - dateCreatedA;
-                    });
-                    results.forEach(function (result) {
-                        document.querySelector(".image-results").appendChild(result);
-                    });
-                } else if (filter === "type5") {
-                    // Sort by price from low to high
-                    results = Array.from(results).sort(function (a, b) {
-                        var priceA = parseInt(a.getAttribute("price"));
-                        var priceB = parseInt(b.getAttribute("price"));
-                        return priceA - priceB;
-                    });
-
-                    results.forEach(function (result) {
-                        document.querySelector(".image-results").appendChild(result);
-                    });
-                } else if (filter === "type6") {
-                    // Sort by price from high to low
-                    results = Array.from(results).sort(function (a, b) {
-                        var priceA = parseInt(a.getAttribute("price"));
-                        var priceB = parseInt(b.getAttribute("price"));
-                        return priceB - priceA;
-                    });
-
-                    results.forEach(function (result) {
-                        document.querySelector(".image-results").appendChild(result);
-                    });
-                }
-            });
-        </script>
-
-    </section>
-
+    </div>
 
 
 
@@ -374,7 +229,5 @@
     </div>
 </footer>
 
-
 </body>
-
 </html>

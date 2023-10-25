@@ -16,7 +16,6 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -34,11 +33,6 @@
     .dropdown:hover .dropdown-menu {
         display: block;
     }
-
-    /* .sectionbgblue {
-        background-color: #153660;
-    } */
-
 
     /* form */
     form {
@@ -111,20 +105,25 @@
     #myBtn:hover {
         background-color: #555;
     }
+
+    #bg {
+        background-image: url(images/BG.jpg);
+    }
 </style>
 
-<body>
+<body id="bg">
+    
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#153660;">
             <!-- logo -->
-            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="200" height="80"
+            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="150" height="80"
                     src="images/transparent-logo.png"></a>
 
             <!-- Links -->
             <ul class="navbar-nav col-sm-7">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" style="font-weight: bold; font-size: medium;">VỀ
-                        CHÚNG TÔI</a>
+                    <a class="nav-link dropdown-toggle" href="about.html"
+                        style="font-weight: bold; font-size: medium;">VỀ CHÚNG TÔI</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
                         <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
@@ -135,8 +134,8 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="projects.html" style="font-weight: bold; font-size: medium;">DỰ
-                        ÁN</a>
+                    <a class="nav-link dropdown-toggle" href="projects.html"
+                        style="font-weight: bold; font-size: medium;">DỰ ÁN</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="apartment.html">Căn hộ</a>
                         <a class="dropdown-item" href="house.html">Nhà phố</a>
@@ -149,42 +148,45 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold; font-size: medium;">TIN
+                    <a class="nav-link dropdown-toggle" href="news.html"
+                        style="font-weight: bold; font-size: medium;">TIN
                         TỨC</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Tin thị trường</a>
-                        <a class="dropdown-item" href="#">Tin về Actech</a>
+                        <a class="dropdown-item" href="news-industry.html">Tin thị trường</a>
+                        <a class="dropdown-item" href="news-actech.html">Tin về Actech</a>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
+                    <a class="nav-link" href="hiring.html" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
+                    <a class="nav-link" href="contact.html" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
                 </li>
             </ul>
 
 
             <div style="position: relative; display: inline-block;">
-                <a href="#">
+                <div>
                     <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
                         onclick="openSearchModal()"></span>
-                </a>
+                </div>
 
                 <div id="searchModal"
-                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"
+                    onclick="closeSearchModal()">
                     <div
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
-                        <span style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 24px;"
-                            onclick="closeSearchModal()">&times;</span>
-                        <input type="text" placeholder="Tìm kiếm..." style="width: 80%; padding: 10px; margin: 10px 0;">
-                        <a href="#">
-                            <span class="fas fa-search"></span>
-                        </a>
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+                        <input type="text" placeholder="Tìm kiếm..."
+                            style="flex: 1; padding: 10px; border: none; outline: none;">
+                        <button
+                            style="background-color: orangered; color: #fff; padding: 10px; cursor: pointer; border: none;">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+
 
             <script>
                 function openSearchModal() {
@@ -211,7 +213,7 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/hoi-an-golden-sea.jpg" width="100%" height="694" object-fit="contain">
+                    <img src="images/hoi-an-golden-sea.jpg" width="100%" height="500" object-fit="contain">
                     <div class="carousel-caption">
                         <h3
                             style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
@@ -222,7 +224,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/shophouse-vinh-1.jpg" width="100%" height="694" object-fit="contain">
+                    <img src="images/shophouse-vinh-1.jpg" width="100%" height="500" object-fit="contain">
                     <div class="carousel-caption">
                         <h3
                             style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
@@ -233,7 +235,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/hoa-binh-da-nang-green.jpg" width="100%" height="694" object-fit="contain">
+                    <img src="images/hoa-binh-da-nang-green.jpg" width="100%" height="500" object-fit="contain">
                     <div class="carousel-caption">
                         <h3
                             style="background-color: rgba(29, 62, 103, 0.8); font-size: 24px; font-weight: bold; color:rgb(255, 255, 255); display: inline-block;">
@@ -259,44 +261,46 @@
     <!-- Start section 2 -->
     <section>
         <div style="margin: 30px;">
-            <div class="colleft" style="width: 50%; float: left;">
-                <h4 style="color: #153660;">CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN</h4>
-                <h1 style="color: #153660;"><a href="#">ACTECH MIỀN TRUNG</a></h1>
+            <div class="colleft" style="width: 50%; float: left; padding: 20px">
+                <h4 style="color: #153660; font-weight: bold;">CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN</h4>
+                <h1 style="color:black; font-weight: bolder;"><a href="index.html">ACTECH MIỀN TRUNG</a></h1>
                 <p style="font-size: 95%;">Actech Miền Trung định hướng xây dựng hệ thống phân phối bất động sản rộng
                     khắp,trở thành doanh nghiệp kinh doanh và phát triển dự án bất động sản tin cậy, là lựa chọn hàng
                     đầu cho những nhà đầu tư, cho khách hàng tại Việt Nam và cả trong khu vực.</p>
                 <p style="font-size: 95%;">Sứ mệnh của chúng tôi là mang lại giá trị tài chính cho nhà đầu tư, mang đến
                     cuộc sống tươi đẹp cho cộng đồng và động lực làm việc cho nhân viên thông qua việc phát triểndoanh
                     nghiệp theo hướng đa ngành nghề.</p>
-                <a href="#" target="_self" class="button primary is-outline"
-                    style="border-radius:99px; color: orangered;">
+                <a href="about.html" target="_self" class="button primary is-outline"
+                    style="border: 2px solid orangered; border-radius: 25px; padding: 5px 20px; color: orangered;">
                     <span>Tìm hiểu thêm</span>
                 </a>
+
                 </a>
             </div>
-            <img src="images/investing-in-real-estate.gif" alt="GIF Image" style="width: 50%; float: left;">
+            <img src="images/investing-in-real-estate.gif" alt="GIF Image"
+                style="width: 50%; float: left; padding: 20px">
         </div>
 
         <div style="float: left; width: 25%; text-align: center; padding: 20px;">
-            <div style="font-size: 80px;"><i class="far fa-building"></i></div>
+            <div style="font-size: 80px;"><a href="projects.html"><i class="far fa-building"></i></a></div>
             <h3 style="color: orangered;">86</h3>
             <p>DỰ ÁN</p>
         </div>
 
         <div style="float: left; width: 25%; text-align: center; padding: 20px;">
-            <div style="font-size: 80px;"> <i class="fas fa-map-marker-alt"></i> </div>
+            <div style="font-size: 80px;"><a href="contact.html"><i class="fas fa-map-marker-alt"></i></a></div>
             <h3 style="color: orangered;">3</h3>
             <p>HỆ THỐNG CHI NHÁNH</p>
         </div>
 
         <div style="float: left; width: 25%; text-align: center; padding: 20px;">
-            <div style="font-size: 80px;"><i class="far fa-handshake"></i></div>
+            <div style="font-size: 80px;"><a href="culture.html"><i class="far fa-handshake"></i></a></div>
             <h3 style="color: orangered;">51</h3>
             <p>ĐỐI TÁC</p>
         </div>
 
         <div style="float: left; width: 25%; text-align: center; padding: 20px;">
-            <div style="font-size: 80px;"> <i class="fas fa-users"></i> </div>
+            <div style="font-size: 80px;"><a href="leaders.html"><i class="fas fa-users"></i></a></div>
             <h3 style="color: orangered;">150</h3>
             <p>HỆ THỐNG NHÂN VIÊN</p>
         </div>
@@ -304,31 +308,41 @@
     <!-- End section 2 -->
 
     <!-- Start Section 3 - form -->
-    <div style="margin: 50px;" align="center">
-        <h4>ĐĂNG KÍ CỘNG TÁC BÁN HÀNG CÙNG ACTECH MIỀN TRUNG</h2>
+    <section>
+        <div style="margin: 50px; font-size: smaller;" align="center">
+            <h4>ĐĂNG KÍ CỘNG TÁC BÁN HÀNG CÙNG ACTECH MIỀN TRUNG</h4>
             <hr style="width: 20%">
             <p>Đến với Actech để nhận chính sách khủng. Được “ứng trước” 20-25% hoa hồng sau khi khách hàng ký HD. Mức
-                hoa
-                hồng hưởng từ 50% – 60%. Được tư vấn & hỗ trợ kiến thức maketing trong suốt quá trình làm việc</p>
+                hoa hồng hưởng từ 50% – 60%. Được tư vấn & hỗ trợ kiến thức maketing trong suốt quá trình làm việc</p>
 
             <form>
-                <input type="text" id="name" placeholder="Họ tên *" required>
-                <input type="email" id="email" placeholder="Nhập email (nếu có)">
-                <input type="tel" id="phone" placeholder="Nhập số điện thoại *" required>
-                <select id="job">
+                <input type="text" id="name" placeholder="Họ tên *" required style="width: 300px;">
+                <input type="email" id="email" placeholder="Nhập email (nếu có)" style="width: 200px;">
+                <input type="tel" id="phone" placeholder="Nhập số điện thoại *" required style="width: 200px;">
+                <select id="job" style="width: 200px;">
                     <option value="option1">Cộng tác viên</option>
                     <option value="option2">Khách hàng</option>
                 </select>
                 <input type="submit" value="ĐĂNG KÍ"
-                    style="background-color: orangered; color: white; font-weight: bold;">
+                    style="background-color: orangered; color: white; font-weight: bold; border-radius: 10px; width: 200px">
             </form>
         </div>
+    </section>
     <!-- END Section 3 - form -->
 
     <!-- section 4 -->
     <section style="margin: 50px;" align="center">
-        <h4 style="color: #153660;">DỰ ÁN BẤT ĐỘNG SẢN</h4>
-        <hr style="width: 20%">
+        <div style="text-align: center; position: relative; overflow: hidden;">
+            <h4 style="margin: 5px; text-transform: uppercase; font-weight: bold; color:#153660; line-height: 2;">
+                DỰ ÁN BẤT ĐỘNG SẢN</h4>
+        </div>
+        <div class="line" style="text-align: center; margin-bottom: 30px;">
+            <div class="line1" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+            <div class="line2"
+                style="display: inline-block; height: 12px; margin: 0 5px; position: relative; top: 5px; width: 12px; border: 1px solid orangered; border-radius: 50px;">
+            </div>
+            <div class="line3" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+        </div>
 
         <div id="demo2" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
@@ -380,28 +394,38 @@
                 </a>
             </div>
 
-            <a href="#" target="_self" class="button primary is-outline" style="border-radius:99px; color: orangered;">
-                <span>Tìm hiểu thêm</span>
+            <a href="projects.html" target="_self" class="button primary is-outline"
+                style="border: 2px solid orangered; border-radius: 25px; padding: 5px 20px; color: orangered;">
+                <span>XEM TOÀN BỘ</span>
             </a>
     </section>
 
     <!-- section 5 news -->
     <section style="margin: 50px;" align="center">
-        <h4 style="color: #153660;">TIN TỨC</h4>
-        <hr style="width: 20%">
+        <div style="text-align: center; position: relative; overflow: hidden;">
+            <h4 style="margin: 5px; text-transform: uppercase; font-weight: bold; color:#153660; line-height: 2;">
+                TIN TỨC</h4>
+        </div>
+        <div class="line" style="text-align: center; margin-bottom: 30px;">
+            <div class="line1" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+            <div class="line2"
+                style="display: inline-block; height: 12px; margin: 0 5px; position: relative; top: 5px; width: 12px; border: 1px solid orangered; border-radius: 50px;">
+            </div>
+            <div class="line3" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+        </div>
 
         <div style="display: flex; justify-content: space-between;">
-            <div style="flex: 1; margin: 5px; text-align: center; border: 1px solid #ddd; padding: 10px;">
+            <div style="flex: 1; margin: 10px; text-align: center; background-color: white;">
                 <img src="images/news1.jpg" alt="News 1" style="width: 100%; height: 200px;">
                 <p>Bất động sản và câu chuyện xây dựng văn hóa doanh nghiệp thời 4.0</p>
                 <a href="">(ĐTCK) “Bão” cách mạng công nghiệp 4.0 đang tạo ra những mô thức kinh doanh mới...</a>
             </div>
-            <div style="flex: 1; margin: 5px; text-align: center; border: 1px solid #ddd; padding: 10px;">
+            <div style="flex: 1; margin: 10px; text-align: center; background-color: white;">
                 <img src="images/news2.jpg" alt="News 2" style="width: 100%; height: 200px;">
                 <p>Chuyên Viên Kd Bất Động Sản Từ 50Triệu Đào Tạo Chuyên Nghiệp Từ Gốc / Có Lương Cứng</p>
                 <a href="">Với quá trình được đào tạo miễn phí, cầm tay chỉ việc bởi chính những...</a>
             </div>
-            <div style="flex: 1; margin: 5px; text-align: center; border: 1px solid #ddd; padding: 10px;">
+            <div style="flex: 1; margin: 10px; text-align: center; background-color: white;">
                 <img src="images/news3.jpg" alt="News 3" style="width: 100%; height: 200px;">
                 <p>Tại sao FPT City lại hấp dẫn nhà đầu tư đến vậy?</p>
                 <a href="">Đà Nẵng đang là thị trường ưa chuộng của những nhà đầu tư địa ốc...</a>
@@ -411,8 +435,19 @@
 
     <!-- section 6 partners -->
     <section style="margin: 50px;" align="center">
-        <h4 style="color: #153660;">ĐỐI TÁC ĐỒNG HÀNH</h4>
-        <hr style="width: 20%">
+        <div style="text-align: center; position: relative; overflow: hidden;">
+            <h4 style="margin: 5px; text-transform: uppercase; font-weight: bold; color:#153660; line-height: 2;">
+                ĐỐI TÁC ĐỒNG HÀNH</h4>
+        </div>
+        <div class="line" style="text-align: center; margin-bottom: 30px;">
+            <div class="line1" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+            <div class="line2"
+                style="display: inline-block; height: 12px; margin: 0 5px; position: relative; top: 5px; width: 12px; border: 1px solid orangered; border-radius: 50px;">
+            </div>
+            <div class="line3" style="width: 80px; height: 1px; display: inline-block; background: #333;"></div>
+        </div>
+
+
         <div class="logo-container">
             <img src="images/logo1.png" alt="Logo 1" class="moving-logo">
             <img src="images/logo2.png" alt="Logo 2" class="moving-logo">
@@ -428,45 +463,50 @@
     <section>
         <div class="container-fluid" style="background-color: #153660; padding: 10pt;">
             <div class="row">
-                <div class="col-2">
-                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="80"
+                <div class="col-2" style="padding: 10px">
+                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="150"
                             src="images/transparent-logo.png"></a>
                 </div>
 
-                <div class="col-6" style="color: white; margin-bottom: 30pt;">
+                <div class="col-6" style="color: white; font-size: medium; padding: 20px;">
                     <h5>CÔNG TY BẤT ĐỘNG SẢN ACTECH</h5>
-                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh , Hải Châu , Đà Nẵng</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh ,
+                        Hải Châu , Đà Nẵng</p>
                     <p><i class="fas fa-phone"></i>Điện thoại: 0905 692 314</p>
                     <p><i class="far fa-envelope"></i>Email: sagovn.net@gmail.com</p>
                 </div>
 
-                <div class="col-4" style="color: white;">
-                    <h6>ĐĂNG KÍ BẢN TIN</h6>
-                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt;">
+                <div class="col-4" style="color: white; padding: 20px">
+                    <h5>ĐĂNG KÍ BẢN TIN</h5>
+                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt; width: 200px">
                     <input type="submit" value="ĐĂNG KÍ"
-                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt;">
-                    <p>Kết nối với chúng tôi</p>
+                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt; width: 150px">
+
+                    <hr>
+                    <h6>Kết nối với chúng tôi</h6>
                     <a href="https://www.facebook.com/ActechLand-361919521333812/" target="_blank"
                         title="Follow on Facebook">
-                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large;"></i>
+                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Call us">
-                        <i class="fas fa-phone" aria-hidden="true" style="font-size: x-large; color: greenyellow;"></i>
+                        <i class="fas fa-phone" aria-hidden="true"
+                            style="font-size: x-large; color: greenyellow; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Follow on Youtube">
-                        <i class="fab fa-youtube" aria-hidden="true" style="font-size: x-large; color: red;"></i>
+                        <i class="fab fa-youtube" aria-hidden="true"
+                            style="font-size: x-large; color: red; padding: 2pt"></i>
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- footer -->
     <footer id="footer">
         <div class="container-fluid">
-            <div class="row" style="background-color: rgb(15, 157, 244); color: white; font-size:medium;" align="center">
+            <div class="row" style="background-color: rgb(15, 157, 244); color: white; font-size:medium;"
+                align="center">
                 <div class="col-4" style="border-right: 1px solid white;">HqvDoho</div>
                 <div class="col-4" style="border-right: 1px solid white;">Hotline: 0916065077</div>
                 <div class="col-4">Thiết kế web chuyên nghiệp hàng đầu Việt Nam</div>

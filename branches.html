@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Giới thiệu chung - CÔNG TY BẤT ĐỘNG SẢN ACTECH</title>
-    <link rel="icon" href="http://bds41.giaodienwebmau.com/wp-content/uploads/2019/08/transparent-logo.png" type="image/x-icon">
+    <title>Hệ thống chi nhánh - CÔNG TY BẤT ĐỘNG SẢN ACTECH</title>
+    <link rel="icon" href="http://bds41.giaodienwebmau.com/wp-content/uploads/2019/08/transparent-logo.png"
+        type="image/x-icon">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,147 +20,173 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
-    .banner {
-        max-width: 100%;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .content {
-        padding-top: 70px; 
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #bg {
+        background-image: url(images/BG.jpg);
     }
 </style>
-<body>
+
+<body id="bg">
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#153660;">
-            <!-- Navbar content -->
-            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="200" height="80"
-                src="images/transparent-logo.png"></a>
+            <!-- logo -->
+            <a class="navbar-brand col-sm-4" href="index.html" rel="home"><img width="150" height="80"
+                    src="images/transparent-logo.png"></a>
 
-        <!-- Links -->
-        <ul class="navbar-nav col-sm-7">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" style="font-weight: bold; font-size: medium;">VỀ
-                    CHÚNG TÔI</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
-                    <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
-                    <a class="dropdown-item" href="corevalue.html">Giá trị cốt lõi</a>
-                    <a class="dropdown-item" href="leaders.html">Ban lãnh đạo</a>
-                    <a class="dropdown-item" href="branches.html">Hệ thống chi nhánh</a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="projects.html" style="font-weight: bold; font-size: medium;">DỰ
-                    ÁN</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="apartment.html">Căn hộ</a>
-                    <a class="dropdown-item" href="house.html">Nhà phố</a>
-                    <a class="dropdown-item" href="land.html">Đất nền</a>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="culture.html" style="font-size: medium; font-weight: bold;">VĂN HÓA</a>
-            </li>
-        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold; font-size: medium;">TIN
-                                TỨC</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Tin thị trường</a>
-                                <a class="dropdown-item" href="#">Tin về Actech</a>
-                            </div>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
-                        </li>
-                    </ul>
-        
-        
-                    <div style="position: relative; display: inline-block;">
-                        <a href="#">
-                            <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
-                                onclick="openSearchModal()"></span>
-                        </a>
-        
-                        <div id="searchModal"
-                            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;">
-                            <div
-                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
-                                <span style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 24px;"
-                                    onclick="closeSearchModal()">&times;</span>
-                                <input type="text" placeholder="Tìm kiếm..." style="width: 80%; padding: 10px; margin: 10px 0;">
-                                <a href="#">
-                                    <span class="fas fa-search"></span>
-                                </a>
-                            </div>
-                        </div>
+            <!-- Links -->
+            <ul class="navbar-nav col-sm-7">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="about.html"
+                        style="font-weight: bold; font-size: medium;">VỀ CHÚNG TÔI</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">Giới thiệu chung</a>
+                        <a class="dropdown-item" href="vision.html">Tầm nhìn - Sứ mệnh</a>
+                        <a class="dropdown-item" href="corevalue.html">Giá trị cốt lõi</a>
+                        <a class="dropdown-item" href="leaders.html">Ban lãnh đạo</a>
+                        <a class="dropdown-item" href="branches.html">Hệ thống chi nhánh</a>
                     </div>
-        
-                    <script>
-                        function openSearchModal() {
-                            document.getElementById("searchModal").style.display = "block";
-                        }
-        
-                        function closeSearchModal() {
-                            document.getElementById("searchModal").style.display = "none";
-                        }
-                    </script>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="projects.html"
+                        style="font-weight: bold; font-size: medium;">DỰ ÁN</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="apartment.html">Căn hộ</a>
+                        <a class="dropdown-item" href="house.html">Nhà phố</a>
+                        <a class="dropdown-item" href="land.html">Đất nền</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="culture.html" style="font-size: medium; font-weight: bold;">VĂN HÓA</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="news.html"
+                        style="font-weight: bold; font-size: medium;">TIN
+                        TỨC</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="news-industry.html">Tin thị trường</a>
+                        <a class="dropdown-item" href="news-actech.html">Tin về Actech</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="hiring.html" style="font-weight: bold; font-size: medium;">TUYỂN DỤNG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" style="font-weight: bold; font-size: medium;">LIÊN HỆ</a>
+                </li>
+            </ul>
+
+
+            <div style="position: relative; display: inline-block;">
+                <div>
+                    <span class="fas fa-search" aria-hidden="true" style="cursor: pointer; color: white;"
+                        onclick="openSearchModal()"></span>
+                </div>
+
+                <div id="searchModal"
+                    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"
+                    onclick="closeSearchModal()">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+                        <input type="text" placeholder="Tìm kiếm..."
+                            style="flex: 1; padding: 10px; border: none; outline: none;">
+                        <button
+                            style="background-color: orangered; color: #fff; padding: 10px; cursor: pointer; border: none;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                function openSearchModal() {
+                    document.getElementById("searchModal").style.display = "block";
+                }
+
+                function closeSearchModal() {
+                    document.getElementById("searchModal").style.display = "none";
+                }
+            </script>
+
         </nav>
     </header>
-    
+
     <div style="margin: 100px 0;"></div>
 
-    <!-- address bar -->
+
+    <!-- section 7 address -->
     <section>
         <div class="container-fluid" style="background-color: #153660; padding: 10pt;">
             <div class="row">
-                <div class="col-2">
-                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="80"
+                <div class="col-2" style="padding: 10px">
+                    <a class="navbar-brand col-sm-4" href="#"><img width="200" height="150"
                             src="images/transparent-logo.png"></a>
                 </div>
 
-                <div class="col-6" style="color: white; margin-bottom: 30pt;">
+                <div class="col-6" style="color: white; font-size: medium; padding: 20px;">
                     <h5>CÔNG TY BẤT ĐỘNG SẢN ACTECH</h5>
-                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh , Hải Châu , Đà Nẵng</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Tầng 5 , tòa nhà Bạch Đằng , 51 Xô Viết Nghệ Tĩnh ,
+                        Hải Châu , Đà Nẵng</p>
                     <p><i class="fas fa-phone"></i>Điện thoại: 0905 692 314</p>
                     <p><i class="far fa-envelope"></i>Email: sagovn.net@gmail.com</p>
                 </div>
 
-                <div class="col-4" style="color: white;">
-                    <h6>ĐĂNG KÍ BẢN TIN</h6>
-                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt;">
+                <div class="col-4" style="color: white; padding: 20px">
+                    <h5>ĐĂNG KÍ BẢN TIN</h5>
+                    <input type="email" id="email" placeholder="Nhập email *" style="border-radius: 5pt; width: 200px">
                     <input type="submit" value="ĐĂNG KÍ"
-                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt;">
-                    <p>Kết nối với chúng tôi</p>
+                        style="background-color: orangered; color: white; font-weight: bold; border-radius: 5pt; width: 150px">
+
+                    <hr>
+                    <h6>Kết nối với chúng tôi</h6>
                     <a href="https://www.facebook.com/ActechLand-361919521333812/" target="_blank"
                         title="Follow on Facebook">
-                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large;"></i>
+                        <i class="fab fa-facebook" aria-hidden="true" style="font-size: x-large; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Call us">
-                        <i class="fas fa-phone" aria-hidden="true" style="font-size: x-large; color: greenyellow;"></i>
+                        <i class="fas fa-phone" aria-hidden="true"
+                            style="font-size: x-large; color: greenyellow; padding: 2pt"></i>
                     </a>
 
                     <a href="#" target="_blank" title="Follow on Youtube">
-                        <i class="fab fa-youtube" aria-hidden="true" style="font-size: x-large; color: red;"></i>
+                        <i class="fab fa-youtube" aria-hidden="true"
+                            style="font-size: x-large; color: red; padding: 2pt"></i>
                     </a>
                 </div>
+                <hr style="width: 100%; background: white;">
+                <div class="col-12" style="text-align: center; color: white; font-size: smaller;">
+                    <p>Copyright &copy; 2023 thuộc về Công ty Bất Động Sản ACTECH</p>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- footer -->
     <footer id="footer">
         <div class="container-fluid">
-            <div class="row" style="background-color: rgb(15, 157, 244); color: white; font-size:medium;" align="center">
+            <div class="row" style="background-color: rgb(15, 157, 244); color: white; font-size:medium;"
+                align="center">
                 <div class="col-4" style="border-right: 1px solid white;">HqvDoho</div>
                 <div class="col-4" style="border-right: 1px solid white;">Hotline: 0916065077</div>
                 <div class="col-4">Thiết kế web chuyên nghiệp hàng đầu Việt Nam</div>
@@ -168,4 +196,5 @@
 
 
 </body>
+
 </html>
